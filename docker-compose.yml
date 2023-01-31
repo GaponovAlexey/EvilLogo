@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  front:
+    container_name: evil
+    build:
+      dockerfile: dockerfile
+    ports:
+      - 3000:3000
