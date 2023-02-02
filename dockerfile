@@ -1,7 +1,6 @@
-FROM node:latest
-WORKDIR /app
-COPY package*.json ./
-RUN yarn install
+FROM node:alpine
+WORKDIR /EvilLogo
+COPY package*.json .
+RUN npm i
 COPY . .
-EXPOSE 3000
-CMD ["yarn", "dev"]
+CMD ["npm", "run", "dev"]
